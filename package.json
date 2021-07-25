@@ -3,8 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start": "vue-cli-service serve",
-    "build": "vue-cli-service build --modern"
+    "dev": "vue-cli-service serve",
+    "start": "vue-cli-service build --modern"
   },
   "dependencies": {
     "@notionhq/client": "^0.2.3",
