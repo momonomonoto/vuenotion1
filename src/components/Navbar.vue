@@ -1,6 +1,6 @@
 <template>
   <div class="navbar">
-    <div @click="$router.push('/')">Adrestia forever</div>
+    <div @click="$router.push('/')">Adrestia club</div>
     <div class="navbar__btns">
       <my-button @click="$router.push('/')">Сводная статистика</my-button>
       <my-button style="margin-left: 20px" @click="$router.push('/store')">Торговый профиль</my-button>
