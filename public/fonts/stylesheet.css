@@ -109,12 +109,3 @@
 	font-weight: bold;
 	font-style: italic;
 }
-
-body {
-	font-family: 'Museo Sans Cyrl 300';
-	font-weight: 100;
-	font-style: normal;
-}
-li {
-	list-style-type: none; /* Убираем маркеры */
-}

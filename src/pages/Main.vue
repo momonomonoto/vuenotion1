@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h2>Реализация тикетов</h2>
+    <h2>Реализация тикеров</h2>
     <ul>
       <li v-if="realizationStatistic" v-for="item in Object.entries(realizationStatistic)" >
         {{ item[0]}}
@@ -12,7 +12,7 @@
 <script>
   import D3PieChart from "@/components/D3PieChart";
   import {mapActions, mapState} from 'vuex'
-  
+
   export default {
     name: "Main",
     components: {D3PieChart},
