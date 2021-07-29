@@ -1,11 +1,8 @@
 <template>
   <div>
-    test
-    <post-list
-            :posts="sortedAndSearchedPosts"
-            @remove="removePost"
-            v-if="!isPostsLoading"
-    />
+    <h2  style="color: red">
+      Пока не сделал :(
+    </h2>
   </div>
 </template>
 

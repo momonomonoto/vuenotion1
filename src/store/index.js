@@ -1,11 +1,11 @@
 import {createStore} from "vuex";
-import {postModule} from "@/store/postModule";
+import {realizationStatistic} from "@/store/realizationStatistic";
 
 export default createStore({
     state: {
       isAuth: false,
     },
     modules: {
-        post: postModule
+        realizationStatistic: realizationStatistic
     }
 })

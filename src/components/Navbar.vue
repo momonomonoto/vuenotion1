@@ -1,9 +1,8 @@
 <template>
   <div class="navbar">
-    <div @click="$router.push('/')">Adrestia club</div>
+    <div @click="$router.push('/')" style="cursor:pointer">Adrestia club</div>
     <div class="navbar__btns">
-      <my-button @click="$router.push('/')">Сводная статистика</my-button>
-      <my-button style="margin-left: 20px" @click="$router.push('/store')">Торговый профиль</my-button>
+      Хороших Вам профитов!
     </div>
   </div>
 </template>
@@ -16,7 +15,9 @@ export default {
 <style scoped>
 .navbar {
   height: 50px;
-  background-color: lightgray;
+  background: linear-gradient(135deg,#b1e541 4.17%,#0fb661);
+  background-image: linear-gradient(135deg,rgb(177, 229, 65) 4.17%, rgb(15, 182, 97));
+  color: #fff;
   box-shadow: 2px 2px 4px gray;
   display: flex;
   align-items: center;

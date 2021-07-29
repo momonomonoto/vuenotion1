@@ -1,13 +1,41 @@
 <template>
   <div>
-    <h1>Добро пожаловать на курс по Vue 3</h1>
+    <h2>Реализация тикетов</h2>
+    <ul>
+      <li v-if="realizationStatistic" v-for="item in Object.entries(realizationStatistic)" >
+        {{ item[0]}}
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-export default {
-
-}
+  import D3PieChart from "@/components/D3PieChart";
+  import {mapActions, mapState} from 'vuex'
+  
+  export default {
+    name: "Main",
+    components: {D3PieChart},
+    mounted() {
+      this.getRealizationStatistic();
+    },
+    methods: {
+      ...mapActions({
+        getRealizationStatistic: 'realizationStatistic/getRealizationStatistic'
+      }),
+    },
+    computed: {
+      ...mapState({
+        realizationStatistic: state => state.realizationStatistic.statistic,
+      })
+    },
+    watch: {
+      realizationStatistic: function (val) {
+        console.log(val.target,'result ')
+        this.testData = val;
+      },
+    }
+  }
 </script>
 
 <style scoped>
