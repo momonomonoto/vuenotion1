@@ -34,12 +34,12 @@
 // set the color scale
             const color = d3.scaleOrdinal()
                 .domain(["a", "b", "c", "d", "e", "f", "g", "h"])
-                .range(d3.schemeDark2);
+                .range(d3.schemeAccent);
 
 // Compute the position of each group on the pie:
             const pie = d3.pie()// Do not sort group by size
                 .value(d => d[1])
-            const data_ready = pie(Object.entries(data)).sort((item,itemNex)=>item.data[1]-itemNex.data[1])
+            const data_ready = pie(Object.entries(data))
 
 // The arc generator
             const arc = d3.arc()
@@ -57,7 +57,7 @@
                 .data(data_ready)
                 .join('path')
                 .attr('d', arc)
-                .attr('fill', d => color(d.data[1]))
+                .attr('fill', d => color(d.data[0]))
                 .attr("stroke", "white")
                 .style("stroke-width", "2px")
                 .style("opacity", 0.7)

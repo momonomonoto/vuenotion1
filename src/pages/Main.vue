@@ -1,11 +1,7 @@
 <template>
   <div>
     <h2>Реализация тикеров</h2>
-    <ul>
-      <li v-if="realizationStatistic" v-for="item in Object.entries(realizationStatistic)" >
-        {{ item[0]}}
-      </li>
-    </ul>
+    <D3PieChart v-if="realizationStatistic" :data="realizationStatistic"/>
   </div>
 </template>
 
