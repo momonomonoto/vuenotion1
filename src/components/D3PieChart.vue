@@ -33,8 +33,8 @@
 
 // set the color scale
             const color = d3.scaleOrdinal()
-                .domain(["a", "b", "c", "d", "e", "f", "g", "h"])
-                .range(d3.schemeAccent);
+                .domain(["a", "b", "c", "d", "e"])
+                .range(['red','green','yellow','gray','blue']);
 
 // Compute the position of each group on the pie:
             const pie = d3.pie()// Do not sort group by size
