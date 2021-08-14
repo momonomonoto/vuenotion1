@@ -13,7 +13,7 @@
         mounted() {
 
 // set the dimensions and margins of the graph
-            const width = 950,
+            const width = 1050,
                 height = 450,
                 margin = 40;
 
@@ -30,12 +30,12 @@
 
 // Create dummy data
             const data = this.data;
-
 // set the color scale
             const color = d3.scaleOrdinal()
-                .domain(["a", "b", "c", "d", "e"])
-                .range(['red','green','yellow','gray','blue']);
+                .domain(Object.getOwnPropertyNames(data).sort())
+                .range(['yellow','green','gray','red','blue']);
 
+            const arr = ['red','green','yellow','gray','blue'];
 // Compute the position of each group on the pie:
             const pie = d3.pie()// Do not sort group by size
                 .value(d => d[1])
@@ -57,7 +57,9 @@
                 .data(data_ready)
                 .join('path')
                 .attr('d', arc)
-                .attr('fill', d => color(d.data[0]))
+                .attr('fill', (d,i) => {
+                    return color(arr[i])
+                })
                 .attr("stroke", "white")
                 .style("stroke-width", "2px")
                 .style("opacity", 0.7)
