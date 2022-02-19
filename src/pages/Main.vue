@@ -36,13 +36,12 @@
     },
     computed: {
       ...mapState({
-        realizationStatistic: state => state.realizationStatistic.statistic,
+        realizationStatistic: state => state.realizationStatistic.ticketStatistic,
         isRealizationStatisticLoading: state => state.realizationStatistic.isRealizationStatisticLoading,
       })
     },
     watch: {
       realizationStatistic: function (val) {
-        console.log(val.target,'result ')
         this.testData = val;
       },
     }

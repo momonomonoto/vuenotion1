@@ -2,12 +2,13 @@ import axios from "axios";
 
 export const realizationStatistic = {
     state: () => ({
-        statistic:null,
+        ticketStatistic:null,
         isRealizationStatisticLoading: false,
     }),
     mutations: {
         setRealizationStatistic(state, statistic) {
-            state.statistic = statistic;
+            state.ticketStatistic = statistic.ticketData;
+            state.authorByCountData = statistic.authorByCountData;
         },
         setLoading(state, isLoading) {
             state.isRealizationStatisticLoading = isLoading;
